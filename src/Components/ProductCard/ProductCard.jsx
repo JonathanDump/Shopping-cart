@@ -2,7 +2,8 @@ import card from "./ProductCard.module.scss";
 
 import React from "react";
 
-export default function ProductCard({ name, price, image, isInCart }) {
+export default function ProductCard({ item }) {
+  const { name, price, image, isInCart } = item;
   return (
     <div className={card.card}>
       <div className={card.img}>

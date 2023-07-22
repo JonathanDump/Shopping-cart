@@ -15,9 +15,11 @@ export function Header() {
         </Button>
         <Button
           className={"headerButton"}
-          optionalClassName={"cart"}
+          //   optionalClassName={"cart"}
           to="cart"
-        ></Button>
+        >
+          <img src="/public/icons/bag.svg" alt="" />
+        </Button>
       </div>
     </div>
   );
