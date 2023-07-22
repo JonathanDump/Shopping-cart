@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Gilda+Display&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gilda+Display&family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
+@import "/src/scss/normalize.css";
+
+html {
+  font-family: "Gilda Display", serif;
+  font-family: "Space Grotesk", sans-serif;
+
+  a {
+    text-decoration: none;
+    color: black;
+
+    &:visited {
+      color: black;
+    }
+  }
+}
