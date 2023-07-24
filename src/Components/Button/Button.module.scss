@@ -1,8 +1,23 @@
 .headerButton {
-  text-decoration: none;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 img {
   height: 32px;
   width: 32px;
+  position: relative;
+}
+
+.cart::after {
+  content: attr(data-count);
+  position: absolute;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 800;
+  border-radius: 50%;
+  color: black;
+  top: 11px;
 }

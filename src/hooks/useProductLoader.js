@@ -1,5 +1,5 @@
 import { useState, useEffect, useReducer } from "react";
-import { reducer } from "../functions/eventsHandlers";
+import { reducer } from "../functions/reducer";
 
 export function useProductLoader() {
   //   const [products, setProducts] = useState(null);
