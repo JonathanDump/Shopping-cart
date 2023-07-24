@@ -1,0 +1,28 @@
+@import "/src/scss/_variables.scss";
+
+.home {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("/public/homeBg.png");
+  background-position: center;
+  background-size: cover;
+  transition: $transition;
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 46px;
+
+    .text {
+      font-family: "Gilda Display", serif;
+      color: white;
+      font-size: 110px;
+      text-align: center;
+    }
+  }
+}

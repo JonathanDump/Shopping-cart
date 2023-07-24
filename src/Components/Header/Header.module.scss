@@ -1,6 +1,21 @@
 .header {
+  width: 100%;
+  color: white;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  padding: 16px 72px;
+  box-sizing: border-box;
+
   .logo {
     font-size: 32px;
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 72px;
   }
 }

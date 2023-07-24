@@ -14,10 +14,8 @@ export function Button({
     : cl[className];
 
   return (
-    <div>
-      <Link className={clName} to={`/${to}`} data-count={count}>
-        {children}
-      </Link>
-    </div>
+    <Link className={clName} to={`/${to}`} data-count={count}>
+      {children}
+    </Link>
   );
 }

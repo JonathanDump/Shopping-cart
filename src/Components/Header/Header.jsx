@@ -9,7 +9,11 @@ export function Header({ products }) {
         Hoel
       </Link>
       <div className={header.buttons}>
-        <Button className={"headerButton"} to="shop">
+        <Button
+          className={"headerButton"}
+          to="shop"
+          optionalClassName={"hover-underline-animation"}
+        >
           Shop
         </Button>
         <Button
