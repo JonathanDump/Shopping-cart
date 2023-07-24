@@ -5,16 +5,15 @@ import { Cart } from "./Pages/Cart/Cart";
 import app from "./App.module.scss";
 import { Header } from "./Components/Header/Header";
 import { Outlet, useParams } from "react-router-dom";
+import { useProductLoader } from "./hooks/useProductLoader";
 
 function App() {
-  const { page } = useParams();
-
+  const { products, loading, setProducts } = useProductLoader();
   return (
     <div className={app.app}>
       <Header />
       <div className={app.main}>
-        <Outlet />
-        {/* {page === "shop" ? <Shop /> : page === "cart" ? <Cart /> : <Home />} */}
+        <Outlet context={{ products, loading, setProducts }} />
       </div>
     </div>
   );

@@ -1,21 +1,38 @@
-import item from "./ItemInfo.module.scss";
+import itemCl from "./ItemInfo.module.scss";
 
 import React from "react";
 
-export default function ItemInfo({ name, image }) {
+export default function ItemInfo({
+  item,
+  handleClickMinus,
+  handleClickPlus,
+  handleInputChange,
+}) {
+  const { name, price, image, inCart } = item;
+  const total = price * inCart;
+
   return (
-    <div className={item.itemInfo}>
-      <div className={item.img}>
+    <div className={itemCl.itemInfo}>
+      <div className={itemCl.img}>
         <img src={image} alt="Product" />
       </div>
-      <div className={item.name}>{name}</div>
-      <div className={item.count}>
-        <button type="button">-</button>
-        <input type="number" />
-        <button type="button">+</button>
+      <div className={itemCl.name}>{name}</div>
+      <div className={itemCl.count}>
+        <button type="button" onClick={handleClickMinus}>
+          -
+        </button>
+        <input
+          className={itemCl.input}
+          value={inCart}
+          onChange={handleInputChange}
+          type="number"
+        />
+        <button type="button" onClick={handleClickPlus}>
+          +
+        </button>
       </div>
-      <div className={item.wrapper}>
-        <div className={item.total}></div>
+      <div className={itemCl.wrapper}>
+        <div className={itemCl.total}>{total}$</div>
         <button type="button">Remove</button>
       </div>
     </div>
