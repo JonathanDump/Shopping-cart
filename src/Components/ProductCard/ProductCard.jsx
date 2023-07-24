@@ -1,8 +1,9 @@
-import { addToCart } from "../../functions/eventsHandlers";
+import { useOutletContext } from "react-router-dom";
 import card from "./ProductCard.module.scss";
 import React from "react";
 
-export default function ProductCard({ item, products, setProducts }) {
+export default function ProductCard({ item }) {
+  const { dispatch } = useOutletContext();
   const { name, price, image, inCart } = item;
   return (
     <div className={card.card}>
@@ -15,7 +16,10 @@ export default function ProductCard({ item, products, setProducts }) {
       </div>
       <div
         className={inCart ? card.inCart : card.cart}
-        onClick={() => addToCart({ item, products, setProducts })}
+        onClick={() => {
+          const type = inCart ? "removeFromCart" : "addToCart";
+          dispatch({ type: type, id: item.id });
+        }}
       ></div>
     </div>
   );

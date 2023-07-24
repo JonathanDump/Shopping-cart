@@ -1,8 +1,10 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useReducer } from "react";
+import { reducer } from "../functions/eventsHandlers";
 
 export function useProductLoader() {
-  const [products, setProducts] = useState(null);
+  //   const [products, setProducts] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [products, dispatch] = useReducer(reducer, null);
 
   useEffect(() => {
     async function productLoader() {
@@ -14,7 +16,7 @@ export function useProductLoader() {
         }
         const data = await response.json();
 
-        setProducts(data);
+        dispatch({ type: "fetch", products: data });
         setLoading(false);
       } catch (err) {
         console.log(err);
@@ -24,5 +26,5 @@ export function useProductLoader() {
     productLoader();
   }, []);
 
-  return { products, loading, setProducts };
+  return { products, loading, dispatch };
 }

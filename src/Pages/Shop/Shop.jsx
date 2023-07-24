@@ -3,7 +3,7 @@ import ProductCard from "../../Components/ProductCard/ProductCard";
 import { useOutletContext } from "react-router-dom";
 
 export function Shop() {
-  const { products, loading, setProducts } = useOutletContext();
+  const { products, loading } = useOutletContext();
   if (loading) {
     return <>Loading...</>;
   }
@@ -11,14 +11,7 @@ export function Shop() {
     <div className={shop.shop}>
       shop
       {products.map((item) => {
-        return (
-          <ProductCard
-            key={item.id}
-            item={item}
-            products={products}
-            setProducts={setProducts}
-          />
-        );
+        return <ProductCard key={item.id} item={item} />;
       })}
     </div>
   );
