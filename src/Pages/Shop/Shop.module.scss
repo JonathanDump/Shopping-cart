@@ -1,0 +1,21 @@
+@import "/src/scss/_variables.scss";
+
+.shop {
+  // height: 100%;
+  flex: 1;
+  background-color: $color-opal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  // padding-top: 70px;
+  padding: 100px 32px 32px 32px;
+  color: white;
+  gap: 32px;
+}
+
+@media (max-width: 600px) {
+  .shop {
+    padding: 100px 16px 32px 16px;
+  }
+}

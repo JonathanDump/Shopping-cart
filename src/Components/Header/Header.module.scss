@@ -7,6 +7,8 @@
   position: absolute;
   padding: 16px 72px;
   box-sizing: border-box;
+  z-index: 5;
+  gap: 16px;
 
   .logo {
     font-size: 32px;
@@ -17,5 +19,15 @@
     justify-content: center;
     align-items: center;
     gap: 72px;
+  }
+}
+
+@media (max-width: 600px) {
+  .header {
+    padding: 16px 16px;
+
+    .buttons {
+      gap: 16px;
+    }
   }
 }

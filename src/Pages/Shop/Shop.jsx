@@ -9,7 +9,6 @@ export function Shop() {
   }
   return (
     <div className={shop.shop}>
-      shop
       {products.map((item) => {
         return <ProductCard key={item.id} item={item} />;
       })}

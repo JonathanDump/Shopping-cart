@@ -12,9 +12,10 @@ export default function ProductCard({ item }) {
       </div>
       <div className={card.info}>
         <div className={card.name}>{name}</div>
-        <div className={card.price}>{price}</div>
+        <div className={card.price}>{price}$</div>
       </div>
       <div
+        data-title={inCart ? "Remove from bag" : "Add to bag"}
         className={inCart ? card.inCart : card.cart}
         onClick={() => {
           const type = inCart ? "removeFromCart" : "addToCart";

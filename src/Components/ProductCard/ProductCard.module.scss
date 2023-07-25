@@ -1,14 +1,67 @@
-%size {
-  width: 20px;
-  height: 20px;
+@import "/src/scss/_variables.scss";
+
+[title] {
+  appearance: none;
+}
+
+%imgSettings {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  transition: all ease 0.2s;
+
+  &:hover::after {
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.2s ease 0.3s;
+  }
+
+  &::after {
+    content: attr(data-title);
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: -100%;
+    left: 0;
+    color: black;
+    min-width: fit-content;
+    white-space: nowrap;
+    padding: 6px;
+    font-size: 12px;
+    background-color: $color-linen;
+    z-index: 500;
+  }
 }
 
 .cart {
   background-image: url("/public/icons/bag.svg");
-  @extend %size;
+  @extend %imgSettings;
 }
 
 .inCart {
   background-image: url("/public/icons/bag-check.svg");
-  @extend %size;
+  @extend %imgSettings;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+
+  .info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+  }
+
+  img {
+    width: 100%;
+  }
 }
