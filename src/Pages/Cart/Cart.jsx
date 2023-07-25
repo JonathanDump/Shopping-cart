@@ -11,9 +11,18 @@ export function Cart() {
   );
   const tax = +(subtotal * 0.2).toFixed(2);
   const total = subtotal + tax;
+  const count = products?.reduce((sum, item) => (sum += item.inCart), 0);
 
   if (loading) {
     return <div>Loading...</div>;
+  }
+
+  if (!count) {
+    return (
+      <div className={cart.empty}>
+        <div>The bag is empty</div>
+      </div>
+    );
   }
 
   return (
