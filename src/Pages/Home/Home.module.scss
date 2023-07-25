@@ -7,6 +7,7 @@
   justify-content: center;
   align-items: center;
   transition: $transition;
+  max-width: 100%;
 
   .container {
     display: flex;
@@ -14,12 +15,16 @@
     align-items: center;
     flex-direction: column;
     gap: 46px;
+    flex: 1;
+    max-width: 100%;
 
     .text {
       font-family: "Gilda Display", serif;
       color: white;
-      font-size: 110px;
+      // font-size: 110px;
+      font-size: clamp(32px, 5rem, 110px);
       text-align: center;
+      max-width: 100%;
     }
   }
 }
