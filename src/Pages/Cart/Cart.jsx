@@ -18,7 +18,6 @@ export function Cart() {
 
   return (
     <div className={cart.cart}>
-      Cart
       <div className={cart.items}>
         {products.map((item) => {
           if (item.inCart) {
@@ -29,13 +28,13 @@ export function Cart() {
       <div className={cart.billingInfo}>
         <div className={cart.bill}>
           <div className={cart.text}>
-            Subtotal <span>{subtotal}$</span>
+            Subtotal<div>{subtotal}$</div>
           </div>
-          <div className={cart.text}>
-            Tax <span>{tax}$</span>
+          <div className={`${cart.text} ${cart.tax}`}>
+            Tax <div>{tax}$</div>
           </div>
           <div className={`${cart.text} ${cart.total}`}>
-            Total <span>{total}$</span>
+            Total <div>{total}$</div>
           </div>
           <button type="button">Checkout</button>
         </div>

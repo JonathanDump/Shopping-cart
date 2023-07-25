@@ -1,0 +1,90 @@
+@import "/src/scss/_variables.scss";
+
+.cart {
+  flex: 1;
+  max-height: 100%;
+  width: 100%;
+  background-color: $color-opal;
+  display: flex;
+  justify-content: space-evenly;
+
+  padding: 84px 32px 32px 32px;
+  color: white;
+  gap: 32px;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+
+  transition: $transition;
+
+  .items {
+    overflow-x: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-self: stretch;
+
+    padding-top: 16px;
+  }
+
+  .billingInfo {
+    padding-top: 16px;
+    display: flex;
+    align-self: flex-start;
+    top: 0;
+    position: sticky;
+
+    .bill {
+      box-sizing: border-box;
+      min-width: 300px;
+      display: flex;
+      flex-direction: column;
+      background-color: $color-linen;
+      color: $color-opal;
+      justify-content: center;
+      gap: 16px;
+      padding: 32px;
+      font-size: 20px;
+
+      .text {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .tax {
+        font-size: 16px;
+      }
+
+      .total {
+        font-weight: 800;
+      }
+
+      button {
+        appearance: none;
+        box-sizing: border-box;
+        border: 1px solid $color-opal;
+        color: $color-opal;
+        padding: 4px 6px;
+        background-color: $color-linen;
+        transition: $transition;
+        cursor: pointer;
+
+        &:hover {
+          background-color: $color-opal;
+          color: $color-linen;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .cart {
+    padding: 100px 16px 32px 16px;
+  }
+
+  .billingInfo {
+    .bill {
+      padding: 16px !important;
+    }
+  }
+}

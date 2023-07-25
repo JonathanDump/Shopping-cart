@@ -29,16 +29,15 @@ export function reducer(products, action) {
     }
     case "increaseItemInCart": {
       return products.map((item) => {
-        console.log("init", item.inCart);
         if (item.id === action.id) {
           return { ...item, inCart: item.inCart + 1 };
         }
-        console.log("res", item.inCart);
+
         return item;
       });
     }
     case "handleInputChange": {
-      products.map((item) => {
+      return products.map((item) => {
         if (item.id === action.id) {
           return { ...item, inCart: action.value };
         }

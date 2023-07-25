@@ -15,17 +15,19 @@
 
   &:hover::after {
     visibility: visible;
+
     opacity: 1;
     transition: all 0.2s ease 0.3s;
   }
 
   &::after {
     content: attr(data-title);
+
     visibility: hidden;
     opacity: 0;
     position: absolute;
-    top: -100%;
-    left: 0;
+    top: -36px;
+    right: -8px;
     color: black;
     min-width: fit-content;
     white-space: nowrap;
