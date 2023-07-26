@@ -22,7 +22,7 @@ export function Header({ products }) {
           to="cart"
           products={products}
         >
-          <img src="/public/icons/bag.svg" alt="" />
+          <img src="public/icons/bag.svg" alt="" />
         </Button>
       </div>
     </div>
