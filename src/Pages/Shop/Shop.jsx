@@ -1,7 +1,7 @@
 import shop from "./Shop.module.scss";
 import ProductCard from "../../Components/ProductCard/ProductCard";
 import { useOutletContext } from "react-router-dom";
-import Transition from "../../animations/transition";
+import Transition from "../../animations/Transition";
 
 export function Shop() {
   const { products, loading } = useOutletContext();

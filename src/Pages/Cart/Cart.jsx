@@ -2,7 +2,7 @@ import { useOutletContext } from "react-router-dom";
 import cart from "./Cart.module.scss";
 import React from "react";
 import ItemInfo from "../../Components/itemInfo/ItemInfo";
-import Transition from "../../animations/transition";
+import Transition from "../../animations/Transition";
 
 export function Cart() {
   const { products, loading } = useOutletContext();

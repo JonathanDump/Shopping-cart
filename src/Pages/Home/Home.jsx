@@ -1,6 +1,6 @@
 import home from "./Home.module.scss";
 import { Button } from "/src/Components/Button/Button";
-import Transition from "../../animations/transition";
+import Transition from "../../animations/Transition";
 
 export function Home() {
   return (
