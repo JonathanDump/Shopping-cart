@@ -8,7 +8,7 @@ export function useProductLoader() {
   useEffect(() => {
     async function productLoader() {
       try {
-        const response = await fetch("/public/json/products.json");
+        const response = await fetch("/json/products.json");
 
         if (!response.ok) {
           throw new Error("Error");
