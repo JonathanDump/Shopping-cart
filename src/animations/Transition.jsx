@@ -1,4 +1,4 @@
-import trans from "./transitions.module.scss";
+import trans from "./Transitions.module.scss";
 import { motion } from "framer-motion";
 
 export default function Transition() {
