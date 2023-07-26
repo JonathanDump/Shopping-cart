@@ -1,0 +1,42 @@
+@import "/src/scss/_variables.scss";
+
+.checkout {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: $color-opal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  box-sizing: border-box;
+
+  .window {
+    border: 1px solid $color-linen;
+    padding: 32px 62px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+    box-sizing: border-box;
+
+    .text {
+      font-size: clamp(24px, 4rem, 100px);
+      color: $color-linen;
+    }
+  }
+}
+
+@media (max-width: 430px) {
+  .checkout {
+    .window {
+      padding: 16px 32px !important;
+
+      .text {
+        font-size: 32px;
+      }
+    }
+  }
+}

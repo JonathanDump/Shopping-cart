@@ -7,6 +7,7 @@ export function Button({
   to,
   optionalClassName,
   products,
+  handleClick,
 }) {
   const count = products?.reduce((sum, item) => (sum += item.inCart), 0);
   const clName = optionalClassName
@@ -14,7 +15,12 @@ export function Button({
     : cl[className];
 
   return (
-    <Link className={clName} to={`/${to}`} data-count={count}>
+    <Link
+      className={clName}
+      to={`/${to}`}
+      data-count={count}
+      onClick={handleClick}
+    >
       {children}
     </Link>
   );

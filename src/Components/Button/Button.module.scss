@@ -39,6 +39,23 @@
   }
 }
 
+.checkout {
+  appearance: none;
+  box-sizing: border-box;
+  border: 1px solid $color-opal;
+  color: $color-opal;
+  padding: 4px 6px;
+  background-color: $color-linen;
+  transition: $transition;
+  cursor: pointer;
+  text-align: center;
+
+  &:hover {
+    background-color: $color-opal;
+    color: $color-linen;
+  }
+}
+
 .hover-underline-animation {
   display: inline-block;
   position: relative;

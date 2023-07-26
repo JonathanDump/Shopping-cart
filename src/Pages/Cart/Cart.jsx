@@ -1,11 +1,12 @@
-import { useOutletContext } from "react-router-dom";
+import { Outlet, useOutletContext } from "react-router-dom";
 import cart from "./Cart.module.scss";
 import React from "react";
 import ItemInfo from "../../Components/itemInfo/ItemInfo";
 import Transition from "../../animations/Transition";
+import { Button } from "../../Components/Button/Button";
 
 export function Cart() {
-  const { products, loading } = useOutletContext();
+  const { products, loading, dispatch } = useOutletContext();
   const subtotal = +products?.reduce(
     (sum, item) => (sum += item.price * item.inCart),
     0
@@ -55,10 +56,19 @@ export function Cart() {
             <div className={`${cart.text} ${cart.total}`}>
               Total <div>{total}$</div>
             </div>
-            <button type="button">Checkout</button>
+            <Button
+              handleClick={() => {
+                dispatch({ type: "checkout" });
+              }}
+              className="checkout"
+              to="checkout"
+            >
+              Checkout
+            </Button>
           </div>
         </div>
       </div>
+
       <Transition />
     </>
   );

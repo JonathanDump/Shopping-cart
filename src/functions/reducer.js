@@ -44,5 +44,8 @@ export function reducer(products, action) {
         return item;
       });
     }
+    case "checkout": {
+      return products.map((item) => ({ ...item, inCart: 0 }));
+    }
   }
 }
