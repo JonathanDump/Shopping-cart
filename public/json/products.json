@@ -3,56 +3,56 @@
     "id": "1",
     "name": "Chair",
     "price": 999,
-    "image": "/public/products/chair.png",
+    "image": "/products/chair.png",
     "inCart": 0
   },
   {
     "id": "2",
     "name": "Lamp colors",
     "price": 399,
-    "image": "/public/products/lampColorfull.png",
+    "image": "/products/lampColorfull.png",
     "inCart": 0
   },
   {
     "id": "3",
     "name": "Lamp",
     "price": 299,
-    "image": "/public/products/lampGray.png",
+    "image": "/products/lampGray.png",
     "inCart": 0
   },
   {
     "id": "4",
     "name": "Nightstand Blue Moon",
     "price": 799,
-    "image": "/public/products/nightstandBlue.png",
+    "image": "/products/nightstandBlue.png",
     "inCart": 0
   },
   {
     "id": "5",
     "name": "Nightstand Dark Chocolate",
     "price": 799,
-    "image": "/public/products/nightstandBrown.png",
+    "image": "/products/nightstandBrown.png",
     "inCart": 0
   },
   {
     "id": "6",
     "name": "Nightstand Snow",
     "price": 999,
-    "image": "/public/products/nightstandWhite.png",
+    "image": "/products/nightstandWhite.png",
     "inCart": 0
   },
   {
     "id": "7",
     "name": "Pair of pillows",
     "price": 399,
-    "image": "/public/products/pillows.png",
+    "image": "/products/pillows.png",
     "inCart": 0
   },
   {
     "id": "8",
     "name": "Sofa",
     "price": 1999,
-    "image": "/public/products/sofa.png",
+    "image": "/products/sofa.png",
     "inCart": 0
   }
 ]

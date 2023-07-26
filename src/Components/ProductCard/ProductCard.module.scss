@@ -39,12 +39,12 @@
 }
 
 .cart {
-  background-image: url("/public/icons/bag.svg");
+  background-image: url("/icons/bag.svg");
   @extend %imgSettings;
 }
 
 .inCart {
-  background-image: url("/public/icons/bag-check.svg");
+  background-image: url("/icons/bag-check.svg");
   @extend %imgSettings;
 }
 
