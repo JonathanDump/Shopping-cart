@@ -14,7 +14,7 @@ export function Cart() {
   const count = products?.reduce((sum, item) => (sum += item.inCart), 0);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <div className={cart.loading}>Loading...</div>;
   }
 
   if (!count) {

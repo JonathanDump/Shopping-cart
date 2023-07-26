@@ -17,9 +17,7 @@ export function useProductLoader() {
 
         dispatch({ type: "fetch", products: data });
         setLoading(false);
-      } catch (err) {
-        console.log(err);
-      }
+      } catch (err) {}
     }
 
     productLoader();

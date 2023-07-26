@@ -5,8 +5,9 @@ import { useOutletContext } from "react-router-dom";
 export function Shop() {
   const { products, loading } = useOutletContext();
   if (loading) {
-    return <>Loading...</>;
+    return <div className={shop.loading}>Loading...</div>;
   }
+
   return (
     <div className={shop.shop}>
       {products.map((item) => {
