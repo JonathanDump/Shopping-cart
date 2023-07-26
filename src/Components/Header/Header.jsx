@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "../Button/Button";
 import header from "./Header.module.scss";
+import { ReactComponent as Bag } from "/public/icons/bag.svg";
 
 export function Header({ products }) {
   return (
@@ -22,7 +23,7 @@ export function Header({ products }) {
           to="cart"
           products={products}
         >
-          <img src="/public/icons/bag.svg" alt="" />
+          <Bag />
         </Button>
       </div>
     </div>
